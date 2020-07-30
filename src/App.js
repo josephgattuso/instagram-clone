@@ -1,5 +1,5 @@
-import React from 'react';
-import Title from './components/Title';
+import React from "react";
+import Title from "./components/Title";
 
 function App() {
   return (
@@ -10,5 +10,3 @@ function App() {
 }
 
 export default App;
-
-
