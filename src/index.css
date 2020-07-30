@@ -27,22 +27,17 @@ body {
   max-width: 960px;
 }
 
-.title h1,
-.title a {
-  color: var(--primary);
-  font-size: 2rem;
-  font-weight: normal;
-  text-decoration: none;
-}
-
-.title h2,
-.title p {
-  text-align: center;
+.title {
+  display: grid;
+  place-items: center;
 }
 
 .title h2 {
-  font-size: 3rem;
-  margin-top: 60px;
+  font-size: 1.5rem;
+}
+.title a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
 /* upload form styles */

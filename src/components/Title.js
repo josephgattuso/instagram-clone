@@ -6,12 +6,7 @@ const Title = () => {
       <h1>
         <a href="/firegram">FireGram</a>
       </h1>
-      <h2>Your Library</h2>
-      <p>
-        Add images to your collection by clicking the
-        <code>'+'</code>
-        button below:
-      </p>
+      <p>Add images to your collection by clicking the plus button</p>
     </div>
   );
 };
