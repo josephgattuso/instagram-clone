@@ -4,6 +4,8 @@
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 [![Follow Me](https://img.shields.io/twitter/follow/joeetuso.svg?label=@joeetuso)](https://twitter.com/intent/follow?screen_name=joeetuso)
 
+Photo gallery powered by Firebase
+
 ## 🚀 Quick Start
 
 ### 1. Install packages
