@@ -4,7 +4,7 @@ const Title = () => {
   return (
     <div className="title">
       <h1>
-        <a href="/">FireGram</a>
+        <a href="/firegram">FireGram</a>
       </h1>
       <h2>Your Library</h2>
       <p>
