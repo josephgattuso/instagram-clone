@@ -1,7 +1,6 @@
 {
   "name": "firegram",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "description": "Photo gallery powered by Firebase",
   "author": "Joseph Gattuso <joseph.gattuso@gmail.com>",
   "license": "MIT",
