@@ -3,9 +3,15 @@ import React from "react";
 const Title = () => {
   return (
     <div className="title">
-      <h1>FireGram</h1>
+      <h1>
+        <a href="/">FireGram</a>
+      </h1>
       <h2>Your Library</h2>
-      <p>Add an image file (jpg or png) to your collection</p>
+      <p>
+        Add images to your collection by clicking the
+        <code>'+'</code>
+        button below:
+      </p>
     </div>
   );
 };

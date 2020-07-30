@@ -18,6 +18,8 @@ body {
   font-family: "SF Pro Display", -apple-system, "Helvetica Neue", sans-serif;
   font-size: 1.2rem;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
@@ -25,10 +27,12 @@ body {
   max-width: 960px;
 }
 
-.title h1 {
+.title h1,
+.title a {
   color: var(--primary);
   font-size: 2rem;
   font-weight: normal;
+  text-decoration: none;
 }
 
 .title h2,
