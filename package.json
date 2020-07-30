@@ -12,7 +12,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
-  "homepage": "http://josephgattuso.github.io/firebase",
+  "homepage": "http://josephgattuso.github.io/firegram",
   "repository": "https://github.com/josephgattuso/firegram",
   "eslintConfig": {
     "extends": "react-app"
