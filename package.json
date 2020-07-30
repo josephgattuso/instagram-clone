@@ -12,7 +12,6 @@
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
-  "main": "index.js",
   "homepage": "http://josephgattuso.github.io/firebase",
   "repository": "https://github.com/josephgattuso/firegram",
   "eslintConfig": {
