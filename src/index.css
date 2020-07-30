@@ -33,8 +33,8 @@ body {
   text-align: center;
 }
 .title h2 {
-  margin-top: 60px;
   font-size: 3rem;
+  margin-top: 60px;
 }
 
 /* upload form styles */
@@ -43,23 +43,23 @@ form {
   text-align: center;
 }
 
-label {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--primary);
-  border-radius: 50%;
-  margin: 10px auto;
-  line-height: 30px;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 24px;
-}
-
 label input {
   height: 0;
-  width: 0;
   opacity: 0;
+  width: 0;
+}
+
+label {
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px auto;
+  width: 30px;
 }
 
 label:hover {
@@ -68,8 +68,8 @@ label:hover {
 }
 
 .output {
-  height: 60px;
   font-size: 0.8rem;
+  height: 60px;
 }
 .error {
   color: var(--error);
