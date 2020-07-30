@@ -8,7 +8,6 @@ function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   return (
     <div className="App">
-      <initializeReactGA />
       <Title />
       <UploadForm />
       <ImageGrid setSelectedImg={setSelectedImg} />
