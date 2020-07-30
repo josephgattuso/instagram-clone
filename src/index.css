@@ -1,7 +1,7 @@
 :root {
-  --primary: deeppink;
-  --secondary: #4e4e4e;
-  --error: tomato;
+  --primary: #ea4aaa;
+  --secondary: #24292e;
+  --error: #d73a49;
 }
 
 /* base styles & title */
@@ -46,13 +46,11 @@ form {
   margin: 30px auto 10px;
   text-align: center;
 }
-
 label input {
   height: 0;
-  opacity: 0;
   width: 0;
+  opacity: 0;
 }
-
 label {
   border-radius: 50%;
   border: 1px solid var(--primary);
@@ -65,26 +63,16 @@ label {
   margin: 10px auto;
   width: 30px;
 }
-
 label:hover {
   background: var(--primary);
-  color: #fff;
+  color: white;
 }
-
 .output {
-  font-size: 0.8rem;
   height: 60px;
+  font-size: 0.8rem;
 }
-
 .error {
   color: var(--error);
-}
-
-/* progress bar styles */
-.progress-bar {
-  background: var(--primary);
-  height: 5px;
-  margin-top: 20px;
 }
 
 /* image grid styles */
