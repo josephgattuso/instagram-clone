@@ -76,6 +76,11 @@ label:hover {
 }
 
 /* progress bar styles */
+.progress-bar {
+  background: var(--primary);
+  height: 5px;
+  margin-top: 20px;
+}
 
 /* image grid styles */
 
