@@ -3,12 +3,6 @@ import Title from "./components/Title";
 import UploadForm from "./components/UploadForm";
 import ImageGrid from "./components/ImageGrid";
 import Modal from "./components/Modal";
-import ReactGA from "react-ga";
-
-function initializeReactGA() {
-  ReactGA.initialize("G-MLZF68H9M9");
-  ReactGA.pageview("/firegram");
-}
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
