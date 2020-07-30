@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "./components/Title";
 import UploadForm from "./components/UploadForm";
 import ImageGrid from "./components/ImageGrid";
+import Modal from "./components/Modal";
 import ReactGA from "react-ga";
 
 function initializeReactGA() {
@@ -10,12 +11,16 @@ function initializeReactGA() {
 }
 
 function App() {
+  const [selectedImg, setSelectedImg] = useState(null);
   return (
     <div className="App">
       <initializeReactGA />
       <Title />
       <UploadForm />
-      <ImageGrid />
+      <ImageGrid setSelectedImg={setSelectedImg} />
+      {selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
     </div>
   );
 }
