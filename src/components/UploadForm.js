@@ -53,7 +53,7 @@ const UploadForm = () => {
 
   return (
     <Form>
-      <ToolTip>Add images to your Firegram collection:</ToolTip>
+      <ToolTip>Add photos to your collection:</ToolTip>
       <label>
         <input type="file" onChange={handleChange} />
         <UploadButton />
