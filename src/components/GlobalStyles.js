@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+
 :root {
   --primaryColor: #fe3a5d;
   --textColor: #24292e;
@@ -22,9 +26,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    color: var(--primaryColor);
+    text-decoration: none;
+    &:active {
+      color: var(--primaryColor);
+    }
+    &:hover {
+      color: var(--primaryColor);
+    }
+    &:visited {
+      color: var(--primaryColor);
+    }
+  }
+
 .app {
   background: #fafafa;
   height: 100vh;
   margin: 0 auto;
   max-width: 960px;
 }
+`;
+
+export default GlobalStyles;

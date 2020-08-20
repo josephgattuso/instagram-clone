@@ -3,13 +3,13 @@ import Header from "./components/Header";
 import UploadForm from "./components/UploadForm";
 import ImageGrid from "./components/ImageGrid";
 import Modal from "./components/Modal";
-
-import "./App.css";
+import GlobalStyles from "./components/GlobalStyles";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   return (
     <div className="app">
+      <GlobalStyles />
       <Header />
       <UploadForm />
       {/* Posts */}
