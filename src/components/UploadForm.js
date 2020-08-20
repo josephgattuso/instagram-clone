@@ -1,5 +1,37 @@
 import React, { useState } from "react";
+import { MdAddCircle } from "react-icons/md";
+import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
+
+const Form = styled.form`
+  margin: 30px auto 10px;
+  text-align: center;
+  & input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+  & label {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+`;
+const ToolTip = styled.p`
+  font-size: 1rem;
+  font-style: italic;
+  padding: 0 0 1rem;
+`;
+const UploadButton = styled(MdAddCircle)`
+  background: var(--primaryColor);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: white;
+    border: 2px solid var(--primaryColor);
+    color: var(--primaryColor);
+  }
+`;
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -20,17 +52,18 @@ const UploadForm = () => {
   };
 
   return (
-    <form>
+    <Form>
+      <ToolTip>Add images to your Firegram collection:</ToolTip>
       <label>
         <input type="file" onChange={handleChange} />
-        <span>+</span>
+        <UploadButton />
       </label>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
         {file && <ProgressBar file={file} setFile={setFile} />}
       </div>
-    </form>
+    </Form>
   );
 };
 
