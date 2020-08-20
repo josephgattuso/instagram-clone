@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import UploadForm from "./components/UploadForm";
 import ImageGrid from "./components/ImageGrid";
 import Modal from "./components/Modal";
+import Post from "./components/Post";
 import GlobalStyles from "./components/GlobalStyles";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <GlobalStyles />
       <Header />
       <UploadForm />
-      {/* Posts */}
+      <Post />
       <ImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
