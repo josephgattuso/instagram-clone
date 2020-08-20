@@ -13,7 +13,13 @@
     "test": "react-scripts test"
   },
   "homepage": "http://josephgattuso.github.io/firegram",
-  "repository": "https://github.com/josephgattuso/firegram",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephgattuso/firegram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josephgattuso/firegram/issues"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -30,15 +36,27 @@
     ]
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.3",
+    "@testing-library/react": "^10.4.8",
+    "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "firebase": "^7.17.1",
-    "framer-motion": "^2.3.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "firebase": "^7.18.0",
+    "framer-motion": "^2.5.3",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-test-renderer": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
