@@ -8,19 +8,31 @@ const Header = styled.header`
   object-fit: contain;
 `;
 
-const Logo = styled.img`
-  object-fit: contain;
-  width: 3rem;
+const Title = styled.h1`
+  font-size: 2.5rem;
+  font-family: "Grand Hotel", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  & a {
+    color: var(--textColor);
+    text-decoration: none;
+    &:active {
+      color: var(--textColor);
+    }
+    &:hover {
+      color: var(--textColor);
+    }
+    &:visited {
+      color: var(--textColor);
+    }
+  }
 `;
 
 export default function () {
   return (
     <Header>
-      <h1>
-        <a href="/firegram">
-          <Logo src="https://josephgattuso.github.io/firegram/logo192.png" />
-        </a>
-      </h1>
+      <Title>
+        <a href="/firegram">Firegram</a>
+      </Title>
     </Header>
   );
 }
