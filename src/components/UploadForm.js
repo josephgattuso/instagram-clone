@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdAddCircle } from "react-icons/md";
+import Icon from "@material-ui/core/Icon";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 
@@ -21,14 +21,13 @@ const ToolTip = styled.p`
   font-style: italic;
   padding: 0 0 1rem;
 `;
-const UploadButton = styled(MdAddCircle)`
+const UploadButton = styled(Icon)`
   background: var(--primaryColor);
   border-radius: 50%;
   color: white;
   cursor: pointer;
   &:hover {
     background: white;
-    border: 2px solid var(--primaryColor);
     color: var(--primaryColor);
   }
 `;
@@ -39,7 +38,7 @@ const UploadForm = () => {
 
   const types = ["image/png", "image/jpeg"];
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     let selected = e.target.files[0];
 
     if (selected && types.includes(selected.type)) {
@@ -56,7 +55,7 @@ const UploadForm = () => {
       <ToolTip>Add photos to your collection:</ToolTip>
       <label>
         <input type="file" onChange={handleChange} />
-        <UploadButton />
+        <UploadButton fontSize="large" className="fa fa-plus-circle" />
       </label>
       <div className="output">
         {error && <div className="error">{error}</div>}
