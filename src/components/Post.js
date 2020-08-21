@@ -35,7 +35,7 @@ export default ({ username, caption, imageUrl }) => {
         <Avatar alt={username} src={profile} style={{ marginRight: "10px" }} />
         <h3>{username}</h3>
       </Header>
-      <Img src={imageUrl} alt="" />
+      <Img src={imageUrl} alt="adblocker much?" />
       <Caption>
         <strong>{username}</strong> {caption}
       </Caption>
