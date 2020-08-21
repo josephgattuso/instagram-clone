@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Avatar from "@material-ui/core/Avatar";
-import profile from "../images/avatar/1.jpg";
+import { Avatar, makeStyles } from "@material-ui/core/";
+import { pink } from "@material-ui/core/colors";
+
+const useStyles = makeStyles(theme => ({
+  pink: {
+    color: theme.palette.getContrastText(pink[500]),
+    backgroundColor: pink[500],
+  },
+}));
 
 const Post = styled.div`
   background: white;
@@ -28,16 +35,24 @@ const Caption = styled.p`
   padding: 20px;
 `;
 
-export default ({ username, caption, imageUrl }) => {
+export default ({ username, caption, imageUrl, profile }) => {
+  const classes = useStyles();
   return (
     <Post>
       <Header>
-        <Avatar alt={username} src={profile} style={{ marginRight: "10px" }} />
+        <Avatar
+          alt={username}
+          className={classes.pink}
+          src={profile}
+          style={{ marginRight: "10px" }}
+        >
+          <i className="fa fa-user" />
+        </Avatar>
         <h3>{username}</h3>
       </Header>
-      <Img src={imageUrl} alt="adblocker much?" />
+      <Img src={imageUrl} alt="Adblocker, perhaps?" />
       <Caption>
-        <strong>{username}</strong> {caption}
+        <strong>{username}:</strong> {caption}
       </Caption>
     </Post>
   );

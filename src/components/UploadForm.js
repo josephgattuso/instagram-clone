@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import Icon from "@material-ui/core/Icon";
+import { makeStyles } from "@material-ui/core";
+import { pink } from "@material-ui/core/colors";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 
+const useStyles = makeStyles(theme => ({
+  pink: {
+    color: theme.palette.getContrastText(pink[500]),
+    backgroundColor: pink[500],
+  },
+}));
+
 const Form = styled.form`
-  margin: 30px auto 10px;
+  margin: 1rem auto;
   text-align: center;
   & input {
     height: 0;
@@ -21,18 +30,13 @@ const ToolTip = styled.p`
   font-style: italic;
   padding: 0 0 1rem;
 `;
-const UploadButton = styled(Icon)`
-  background: var(--primaryColor);
-  border-radius: 50%;
-  color: white;
+
+const PlusCircle = styled(Icon)`
+  border-radius: 100%;
   cursor: pointer;
-  &:hover {
-    background: white;
-    color: var(--primaryColor);
-  }
 `;
 
-const UploadForm = () => {
+const UploadForm = props => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 
@@ -50,12 +54,17 @@ const UploadForm = () => {
     }
   };
 
+  const classes = useStyles();
+
   return (
     <Form>
-      <ToolTip>Add photos to your collection:</ToolTip>
+      <ToolTip>Add a photo to the collection:</ToolTip>
       <label>
         <input type="file" onChange={handleChange} />
-        <UploadButton fontSize="large" className="fa fa-plus-circle" />
+        <PlusCircle
+          fontSize="large"
+          className={`fa fa-plus-circle ${classes.pink}`}
+        />
       </label>
       <div className="output">
         {error && <div className="error">{error}</div>}

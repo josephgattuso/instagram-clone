@@ -10,17 +10,17 @@ function App() {
   // eslint-disable-next-line
   const [posts, setPosts] = useState([
     {
-      username: "joeetuso",
+      username: "anonymous",
       imageUrl: "https://placeimg.com/640/480/animals",
-      caption: "such a lovely animal",
+      caption: "such lovely animals",
     },
     {
-      username: "joeetuso",
+      username: "anonymous",
       imageUrl: "https://placeimg.com/640/480/tech",
       caption: "awesome tech",
     },
     {
-      username: "joeetuso",
+      username: "anonymous",
       imageUrl: "https://placeimg.com/640/480/nature",
       caption: "getting back to nature",
     },
