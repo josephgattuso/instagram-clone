@@ -8,13 +8,12 @@ const ImageGrid = ({ setSelectedImg }) => {
   return (
     <div className="img-grid">
       {docs &&
-        docs.map((doc) => (
+        docs.map(doc => (
           <motion.div
             className="img-wrap"
             key={doc.id}
             layout
             whileHover={{ opacity: 1 }}
-            s
             onClick={() => setSelectedImg(doc.url)}
           >
             <motion.img
