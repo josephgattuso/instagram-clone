@@ -1,4 +1,4 @@
-# Firegram
+# [Firegram](https://gattuso-firegram.web.app)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/josephgattuso/firegram/blob/master/LICENSE)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
@@ -8,26 +8,35 @@ Photo gallery powered by Firebase
 
 ## 🚀 Quick Start
 
-### 1. Install packages
+### Using `yarn`:
 
 ```sh
 yarn
-```
-
-### 2. Start developing!
-
-```sh
 yarn start
 ```
 
-### 3. Need to [test](https://facebook.github.io/create-react-app/docs/running-tests)?
+### Using `npm`:
 
 ```sh
-yarn test
+npm install
+npm run start
 ```
 
-### 4. Build your app!
+<!--
 
-```sh
-yarn build
+### 'package.json' scripts:
+
+```json
+{
+  "homepage": "http://josephgattuso.github.io/firegram",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "deploy": "gh-pages -d build"
+  }
+}
 ```
+
+-->
