@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { Button, Modal, Input } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import styled from "styled-components";
+import React, { useEffect, useState } from 'react';
+// import { Button, Modal, Input } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+// import styled from 'styled-components';
 
-import GlobalStyles from "./components/GlobalStyles";
-import Header from "./components/Header";
-import UploadForm from "./components/UploadForm";
-import ImageGrid from "./components/ImageGrid";
-import OldModal from "./components/OldModal";
-import Post from "./components/Post";
-import Footer from "./components/Footer";
+import GlobalStyles from './components/GlobalStyles';
+import Header from './components/Header';
+import UploadForm from './components/UploadForm';
+import ImageGrid from './components/ImageGrid';
+import OldModal from './components/OldModal';
+import Post from './components/Post';
+import Footer from './components/Footer';
 
-import { db, auth } from "./firebase/config";
+// import { db, auth } from './firebase/config';
+import { db } from './firebase/config';
 
 function getModalStyle() {
   const top = 50;
@@ -26,10 +27,10 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
+    border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    position: "absolute",
+    position: 'absolute',
     width: 400,
   },
 }));
@@ -39,38 +40,43 @@ function App() {
   const [modalStyle] = React.useState(getModalStyle);
 
   const [posts, setPosts] = useState([]);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const [username, setUsername] = useState(false);
-  const [email, setEmail] = useState(false);
-  const [password, setPassword] = useState(false);
+  // const [username, setUsername] = useState(false);
+  // const [email, setEmail] = useState(false);
+  // const [password, setPassword] = useState(false);
 
   const [selectedImg, setSelectedImg] = useState(null);
 
   useEffect(() => {
-    db.collection("posts").onSnapshot(snapshot => {
-      setPosts(snapshot.docs.map(doc => ({ id: doc.id, post: doc.data() })));
+    db.collection('posts').onSnapshot(snapshot => {
+      setPosts(
+        snapshot.docs.map(doc => ({
+          id: doc.id,
+          post: doc.data(),
+        }))
+      );
     });
   }, []);
 
-  const signUp = event => {
-    event.preventDefault();
+  // const signUp = event => {
+  //   event.preventDefault();
 
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .catch(error => alert(error.message));
-  };
+  //   auth
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .catch(error => alert(error.message));
+  // };
 
-  const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-  `;
+  // const Form = styled.form`
+  //   display: flex;
+  //   flex-direction: column;
+  // `;
 
   return (
     <div className="app">
       <GlobalStyles />
 
-      <Modal open={open} onClose={() => setOpen(false)}>
+      {/* <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
           <Form>
             <center>
@@ -103,11 +109,11 @@ function App() {
             </Button>
           </Form>
         </div>
-      </Modal>
+      </Modal> */}
 
       <Header />
 
-      <Button onClick={() => setOpen(true)}>Sign-up</Button>
+      {/* <Button onClick={() => setOpen(true)}>Sign-up</Button> */}
 
       <UploadForm />
 

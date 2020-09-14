@@ -1,6 +1,6 @@
-import firebase from "firebase";
+import firebase from 'firebase';
 
-require("dotenv").config();
+require('dotenv').config();
 
 // Firebase configuration
 const firebaseApp = firebase.initializeApp({

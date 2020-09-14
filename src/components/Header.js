@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Header = styled.header`
   background: white;
@@ -12,8 +12,8 @@ const Title = styled.h1`
   display: grid;
   place-items: center;
   font-size: 2.5rem;
-  font-family: "Grand Hotel", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Grand Hotel', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   & a {
     color: var(--textColor);
     text-decoration: none;

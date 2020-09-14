@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Avatar, makeStyles } from "@material-ui/core/";
-import { pink } from "@material-ui/core/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { Avatar, makeStyles } from '@material-ui/core/';
+import { pink } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   pink: {
@@ -44,7 +44,7 @@ export default ({ username, caption, imageUrl, profile }) => {
           alt={username}
           className={classes.pink}
           src={profile}
-          style={{ marginRight: "10px" }}
+          style={{ marginRight: '10px' }}
         >
           <i className="fa fa-user" />
         </Avatar>

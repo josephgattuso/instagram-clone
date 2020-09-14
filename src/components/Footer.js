@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: #212121;
@@ -38,7 +38,7 @@ const Footer = () => {
       <nav>
         <div className="footer-col">
           <p>
-            Built by{" "}
+            Built by{' '}
             <a
               href="https://twitter.com/joeetuso"
               target="_blank"
