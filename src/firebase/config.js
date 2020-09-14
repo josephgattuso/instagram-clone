@@ -1,5 +1,4 @@
 import firebase from "firebase";
-import "firebase/analytics";
 
 require("dotenv").config();
 
@@ -11,14 +10,13 @@ const firebaseApp = firebase.initializeApp({
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_DEV_ID,
-  measurementId: "G-MK7G90LW2X",
+  appId: process.env.REACT_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 });
 
 const auth = firebase.auth();
 const db = firebaseApp.firestore();
-const ga = firebase.analytics();
 const storage = firebase.storage();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { auth, db, ga, storage, timestamp };
+export { auth, db, storage, timestamp };
