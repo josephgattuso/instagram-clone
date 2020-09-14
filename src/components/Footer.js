@@ -7,17 +7,19 @@ const FooterWrapper = styled.footer`
   color: gray;
   margin: 0 auto;
   padding: 30px 20px 50px;
+  position: absolute;
   text-align: left;
+  width: 100%;
   & nav {
+    align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
-    max-width: 900px;
     margin: 0 auto;
+    max-width: 900px;
     .footer-col {
-      flex: 1 auto;
       display: inline-flex;
       flex-direction: column;
+      flex: 1 auto;
       padding-right: 1em;
     }
   }
